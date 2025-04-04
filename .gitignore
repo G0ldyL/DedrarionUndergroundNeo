@@ -1,0 +1,9 @@
+/build/
+/.gradle/
+/run/
+/gradle/
+/.idea/
+.idea/modules.xml
+/.idea
+/.gradle
+/.gradle
