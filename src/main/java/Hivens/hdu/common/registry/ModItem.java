@@ -1,15 +1,13 @@
 package Hivens.hdu.common.registry;
 
 import Hivens.hdu.HDU;
+import Hivens.hdu.common.item.MagicDetector;
+import Hivens.hdu.common.util.ModTooltipFuelItem;
 import Hivens.hdu.common.util.ModTooltipItem;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.function.Function;
 
 public class ModItem {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(HDU.MODID);
@@ -17,10 +15,8 @@ public class ModItem {
     public static final DeferredItem<Item> RAW_ETHEREUM = ITEMS.registerItem("raw_ethereum",
             Item::new, new Item.Properties());
 
-
     public static final DeferredItem<Item> ETHEREUM = ITEMS.registerItem("ethereum",
-            Item::new, new Item.Properties());
-
+            (properties) -> new ModTooltipItem(properties, "tooltip.item.hdu.ethereum"), new Item.Properties());
 
     public static final DeferredItem<Item> ETHEREUM_DUST = ITEMS.registerItem("ethereum_dust",
             Item::new, new Item.Properties());
@@ -33,17 +29,16 @@ public class ModItem {
 
     public static final DeferredItem<Item> CATALYST_OF_DEBAUCHERY = ITEMS.registerItem("catalyst_of_debauchery",
             Item::new, new Item.Properties());
-/*
-    public static final DeferredItem<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
-            () -> new MagicDetectorItem(new Item.Properties()));
 
+    public static final DeferredItem<Item> MAGIC_DETECTOR = ITEMS.registerItem("magic_detector",
+            MagicDetector::new, new Item.Properties());
+/*
     public static final DeferredItem<Item> FORBIDDEN_FRUIT = ITEMS.register("forbidden_fruit",
             () -> new TooltipFoodItem(new Item.Properties().food(FoodRegistry.FORBIDDEN_FRUIT), "tooltip.item.hdu.forbidden_fruit"));
+*/
+    public static final DeferredItem<Item> FUEL_OF_PROMISES = ITEMS.registerItem("fuel_of_promises",
+            (properties) -> new ModTooltipFuelItem(properties, 3200, "tooltip.item.hdu.fuel_of_promises"), new Item.Properties());
 
-    public static final DeferredItem<Item> FUEL_OF_PROMISES = ITEMS.register("fuel_of_promises",
-            () -> new TooltipFuelItem(new Item.Properties(), 400, "tooltip.item.hdu.fuel_of_promises"));
-
- */
 
 
     /*

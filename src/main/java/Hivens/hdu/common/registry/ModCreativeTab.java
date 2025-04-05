@@ -17,7 +17,7 @@ public class ModCreativeTab {
 
         public static final Supplier<CreativeModeTab> DEDRARION_UNDERGROUND_ITEM = CREATIVE_MOD_TAB.register("dedrarion_underground_item_tab",
                 () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.RUBY.get()))
-                        .title(Component.translatable("creativetab.hdu.dedrarion_underground_item"))
+                        .title(Component.translatable("creativetab.hdu_tab"))
                         .displayItems((itemDisplayParameters, output) ->  {
 
                             output.accept(ModItem.RAW_ETHEREUM.get());

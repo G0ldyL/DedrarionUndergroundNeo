@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-@Deprecated
+@SuppressWarnings({"deprecation"})
 public class ModTooltipItem extends Item {
     private final String tooltipKey;
 
@@ -27,6 +27,7 @@ public class ModTooltipItem extends Item {
             @NotNull TooltipFlag flag
     ) {
         consumer.accept(Component.translatable(this.tooltipKey));
+        super.appendHoverText(stack, context, tooltipDisplay, consumer, flag);
     }
 
 
