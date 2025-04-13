@@ -36,6 +36,42 @@ public class ModCreativeTab {
                     .title(Component.translatable("creativetab.hdu.dedrarion_underground_block"))
                     .displayItems((itemDisplayParameters, output) ->  {
 
+                        // Ore Blocks
+                        output.accept(ModBlock.ETHEREUM_ORE.get());
+                        output.accept(ModBlock.ETHEREUM_BLOCK.get());
+                        output.accept(ModBlock.RAW_ETHEREUM_BLOCK.get());
+
+                        // Ruby
+
+                        output.accept(ModBlock.RUBY_ORE.get());
+                        output.accept(ModBlock.DEEPSLATE_RUBY_ORE.get());
+                        output.accept(ModBlock.RUBY_BLOCK.get());
+
+                        // Eftorit
+
+                        output.accept(ModBlock.EFTORIT_ORE.get());
+                        output.accept(ModBlock.DEEPSLATE_EFTORIT_ORE.get());
+                        output.accept(ModBlock.EFTORIT_BLOCK.get());
+
+                        // Blocks
+                        output.accept(ModBlock.HOPE_STONE.get());
+                        output.accept(ModBlock.SMOOTH_HOPE_STONE.get());
+                        output.accept(ModBlock.HOPE_SHARDS.get());
+
+                        output.accept(ModBlock.HOPE_STONE_BRICKS.get());
+                        output.accept(ModBlock.SMOOTH_HOPE_STONE_BRICKS.get());
+                        output.accept(ModBlock.HOPE_SHARD_BRICKS.get());
+/*
+                        output.accept(ModBlock.HOPE_STONE_STAIRS.get());
+                        output.accept(ModBlock.SMOOTH_HOPE_STONE_STAIRS.get());
+                        output.accept(ModBlock.HOPE_SHARD_STAIRS.get());
+
+                        output.accept(ModBlock.HOPE_BRICK_STAIRS.get());
+                        output.accept(ModBlock.SMOOTH_HOPE_BRICK_STAIRS.get());
+                        output.accept(ModBlock.HOPE_SHARD_BRICK_STAIRS.get());
+                        
+ */
+
 
                     }).build());
 

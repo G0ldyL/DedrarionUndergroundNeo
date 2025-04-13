@@ -1,5 +1,6 @@
 package Hivens.hdu;
 
+import Hivens.hdu.common.registry.ModBlock;
 import Hivens.hdu.common.registry.ModCreativeTab;
 import Hivens.hdu.common.registry.ModItem;
 import com.mojang.logging.LogUtils;
@@ -25,6 +26,7 @@ public class HDU {
 
         ModItem.register(modEventBus);
         // ModBlock
+        ModBlock.register(modEventBus);
         ModCreativeTab.register(modEventBus);
     }
 
